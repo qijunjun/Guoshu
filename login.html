@@ -25,13 +25,16 @@
                         <a href="javascript:void(0);"><span> > </span>立即注册</a>
                     </p>
                     <div class="form_input">
-                        <input type="text" placeholder="请输入用户名">
+                        <input class="username" type="text" name="username" placeholder="请输入用户名">
+                        <span class="error" style="display: inline-block">输入信息提示</span>
                     </div>
-                    <div class="form_input">
-                        <input type="password" placeholder="请输入密码">
+                    <div class="form_input form_pwd">
+                        <input class="pwd" type="password" name="password" placeholder="请输入密码">
+                        <span class="error">输入信息提示</span>
                     </div>
                     <div class="clearfix">
-                        <input class="float_left" type="checkbox"><span>记住用户名</span>
+                        <input class="float_left" type="checkbox" name="remember" id="remember">
+                        <label for="remember" class="float_left">记住用户名</label>
                         <label class="float_right">忘记密码</label>
                     </div>
                     <div>
@@ -43,7 +46,7 @@
     </div>
     <div class="footer">
         <p>关于我们 | 联系我们 | 招聘人才 | 友情链接</p>
-        <p>CopyRight © 2017 果蔬网信息技术有限公司 All Rights Reserved</p>
+        <p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
         <p>电话：010-****888    京ICP备*******8号</p>
     </div>
 </body>
