@@ -56,7 +56,7 @@ body{
     height:38px;
     border:1px solid #37ab40;
     padding-left:35px;
-    background: url('../image/search.png') 10px center no-repeat;
+    background: url('../images/search.png') 10px center no-repeat;
     background-size: 25px;
     outline: none;
 }
@@ -165,7 +165,7 @@ body{
     height:15px;
     content: " ";
     display: inline-block;
-    background:url('../image/icon.png') no-repeat;
+    background:url('../images/icon.png') no-repeat;
     background-size: 200px;
 }
 .nav_left>ul li i.s1{
