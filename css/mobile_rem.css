@@ -47,8 +47,26 @@ body{
     overflow-y: auto;
     margin-bottom:0.5rem;
 }
+.center .slide{
+    position:relative;
+}
 .center .slide img{
     width:100%;
+}
+.center .slide .slide_circle{
+    position:absolute;
+    right:0.5rem;
+    bottom:0.5rem;
+}
+.center .slide .slide_circle li{
+    display: inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 0.25rem;
+    border:0.075rem solid #ccc;
+}
+.center .slide .slide_circle li.active{
+    border:0.075rem solid #37ab40;
 }
 .center .list{
     margin-top:0.5rem;
