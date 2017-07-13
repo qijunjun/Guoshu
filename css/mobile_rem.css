@@ -1,6 +1,8 @@
 body{
     font-family: '微软雅黑';
     color:#666;
+    -webkit-overflow-scrolling:touch;
+    overflow-scrolling:touch;
 }
 .mobile{
     /*使用此种方法定位，使结尾定位相对其定位，兼容微信*/
@@ -41,11 +43,10 @@ body{
     left:0;
     right:0;
     top:2.5rem;
-    bottom:0.3rem;
+    bottom:2.5rem;
     background:#efefef;
     overflow-x: hidden;
     overflow-y: auto;
-    margin-bottom:0.5rem;
 }
 .center .slide{
     position:relative;
@@ -69,11 +70,10 @@ body{
     border:0.075rem solid #37ab40;
 }
 .center .list{
-    margin-top:0.5rem;
+    margin-top:0.7rem;
     padding:1rem 0 0;
     background:#fff;
     display: block;
-    height:5.5rem;
 }
 .center .list li{
     width:25%;
@@ -121,11 +121,11 @@ body{
 .center .list li h2{
     margin-top:0.5rem;
     height:1.05rem;
-    font:bold 0.65rem/1.05rem "微软雅黑";
+    font:bold 13px/1.05rem "微软雅黑";
     color:#333;
 }
 .center .banner{
-    margin-top:0.5rem;
+    margin:0.5rem 0;
     background:#fff;
     padding:1rem 0.5rem;
 }
@@ -133,7 +133,10 @@ body{
     border-left:0.2rem solid gold;
     padding-left:0.5rem;
     color:gold;
-    font-size:0.8rem;
+    font-size:18px;
+}
+.center .banner_title a{
+    font-size:16px;
 }
 .banner .banner_img{
     margin-top:0.5rem;
@@ -148,6 +151,7 @@ body{
     width:30%;
     border-right:0.05rem solid #ccc;
     padding:0 2%;
+    font-size:13px;
 }
 .banner .banner_list li:first-child{
     padding-left:0;
@@ -161,6 +165,7 @@ body{
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom:0.5rem;
+    font-size:16px;
 }
 .banner .banner_list li p:last-child{
     height:1.3rem;
@@ -177,12 +182,18 @@ body{
     border:0.05rem solid #ccc;
     border-radius: 1.3rem;
     color:red;
-    font-size:1.1rem;
+    font-size:14px;
     font-weight: bold;
+}
+@media (min-width:500px){
+    .banner .banner_list li p a{
+        font-size: 20px;
+    }
 }
 .footer{
     width:100%;
-    height:3rem;
+    height:2.5rem;
+    display: block;
     /*为了兼容微信用绝对定位*/
     position:absolute;
     left:0;
@@ -190,18 +201,22 @@ body{
     bottom:0;
     background:#fff;
     font-size:0;
-    /*padding:10px 0;*/
+}
+.footer ul{
+    height:2.5rem;
 }
 .footer ul li{
     width:25%;
-    font-size:0.65rem;
+    height:2.5rem;
+    font-size:13px;
     text-align: center;
 }
 .footer ul li a{
-    width:100%;
-    height:2rem;
     display: block;
+    width:100%;
+    height:1.3rem;
     text-align: center;
+    margin:0.25rem auto 0;
 }
 .footer ul li:nth-child(1) a{
     background:url("../images/mobileicons.png") 1.25rem -25rem  no-repeat;
@@ -218,4 +233,9 @@ body{
 .footer ul li:nth-child(4) a{
     background:url("../images/mobileicons.png") 1.25rem -27.85rem  no-repeat;
     background-size: 3rem 36.4rem;
+}
+.footer ul li h3{
+    font:12px/12px "微软雅黑";
+    color:#949392;
+    margin-top:0.2rem;
 }

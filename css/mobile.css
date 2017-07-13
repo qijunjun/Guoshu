@@ -183,22 +183,22 @@ body{
 .footer ul li a{
     width:100%;
     height:40px;
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 .footer ul li:nth-child(1) a{
-    background:url("../images/mobileicons.png") 25px -500px  no-repeat;
+    background:url("../images/mobileicons.png") center -500px  no-repeat;
     background-size: 60px 728px;
 }
 .footer ul li:nth-child(2) a{
-    background:url("../images/mobileicons.png") 25px -670px  no-repeat;
+    background:url("../images/mobileicons.png") center -670px  no-repeat;
     background-size: 60px 728px;
 }
 .footer ul li:nth-child(3) a{
-    background:url("../images/mobileicons.png") 25px -447px  no-repeat;
+    background:url("../images/mobileicons.png") center -447px  no-repeat;
     background-size: 60px 728px;
 }
 .footer ul li:nth-child(4) a{
-    background:url("../images/mobileicons.png") 25px -557px  no-repeat;
+    background:url("../images/mobileicons.png") center -557px  no-repeat;
     background-size: 60px 728px;
 }
