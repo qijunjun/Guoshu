@@ -299,6 +299,7 @@ body{
     border-right:1px solid #ccc;
     text-align: center;
     margin-left:-1px;
+    overflow: hidden;
 }
 .food_list_img ul li:last-child{
     border-right: none;
@@ -310,6 +311,10 @@ body{
 }
 .food_list_img ul li img{
     height:144px;
+    transition: all 1s ease;
+}
+.food_list_img ul li img:hover{
+    transform: scale(1.2);
 }
 .food_list_img ul li h4{
     margin-top:20px;
