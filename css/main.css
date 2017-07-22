@@ -195,16 +195,37 @@ body{
 }
 .nav_left .slide{
     width:750px;
-}
-.nav_left .slide .banner li:nth-child(2),.nav_left .slide .banner li:nth-child(3){
-    display: none;
-}
-.slide{
+    height:269px;
     position:relative;
-    /*height:274px;*/
+    left:0;
+    top:0;
+    /*overflow: hidden;*/
+
 }
+.nav_left .ul{
+    width:750px;
+    height:269px;
+    position:relative;
+    left:0;
+    top:0;
+}
+.nav_left .ul .list{
+    position:absolute;
+}
+.nav_left .ul .list:nth-child(1){
+    left:0;
+}
+.nav_left .ul .list:nth-child(2){
+    left:750px;
+}
+.nav_left .ul .list:nth-child(3){
+    left:750px;
+}
+.nav_left .ul .list:nth-child(4){
+     left:750px;
+ }
 /*轮播图圆点*/
-.slide_circle{
+.points{
     width:100%;
     /*margin:0 auto;*/
     position:absolute;
@@ -214,18 +235,18 @@ body{
     text-align: center;
     font-size:0;
 }
-.slide_circle li{
-    width:10px;
-    height:10px;
-    border-radius: 5px;
+.points li{
+    width:12px;
+    height:12px;
+    border-radius: 6px;
     margin-left:10px;
     display: inline-block;
     background:#ccc;
 }
-.slide_circle li.active{
+.points li.active{
     background: #37ab40;
 }
-.slide_circle li:hover{
+.points li:hover{
     cursor: pointer;
 }
 .slide .prev{
@@ -238,7 +259,7 @@ body{
     right:20px;
     top:50%;
 }
-.nav_left .slide .banner img{
+.nav_left .slide .ul img{
     width:100%;
 }
 .nav_left .adv{
