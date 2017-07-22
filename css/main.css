@@ -197,40 +197,57 @@ body{
     width:750px;
     height:269px;
     position:relative;
-    left:0;
-    top:0;
-    /*overflow: hidden;*/
 
 }
-.nav_left .ul{
+.ul{
     width:750px;
     height:269px;
     position:relative;
-    left:0;
-    top:0;
+    overflow: hidden;
 }
-.nav_left .ul .list{
+.ul li.list{
     position:absolute;
 }
-.nav_left .ul .list:nth-child(1){
+.ul li img{
+    width:750px;
+    height:300px;
+}
+.ul li:nth-child(1){
     left:0;
 }
-.nav_left .ul .list:nth-child(2){
+.ul li:nth-child(2){
     left:750px;
 }
-.nav_left .ul .list:nth-child(3){
+.ul li:nth-child(3){
     left:750px;
 }
-.nav_left .ul .list:nth-child(4){
-     left:750px;
- }
+.ul li:nth-child(4){
+    left:750px;
+}
+div .prev{
+    width:40px;
+    height:40px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    background:url("../images/prev.png") no-repeat 0 0;
+    cursor: pointer;
+    z-index: 9000;
+}
+div .next{
+    width:40px;
+    height:40px;
+    position:absolute;
+    right:20px;
+    top:50%;
+    background:url("../images/next.png") no-repeat 0 0;
+    cursor: pointer;
+    z-index: 9000;
+}
 /*轮播图圆点*/
 .points{
     width:100%;
-    /*margin:0 auto;*/
     position:absolute;
-    /*left:50%;*/
-    /*margin-left:-100px;*/
     bottom:15px;
     text-align: center;
     font-size:0;
@@ -239,7 +256,7 @@ body{
     width:12px;
     height:12px;
     border-radius: 6px;
-    margin-left:10px;
+    margin-left:15px;
     display: inline-block;
     background:#ccc;
 }
@@ -260,7 +277,8 @@ body{
     top:50%;
 }
 .nav_left .slide .ul img{
-    width:100%;
+    width:750px;
+    height:269px;
 }
 .nav_left .adv{
     width:240px;
