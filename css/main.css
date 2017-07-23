@@ -51,6 +51,7 @@ body{
     margin-left:100px;
     font-size:0;
     margin-top:10px;
+    position: relative;
 }
 .search input[type='text']{
     width:481px;
@@ -70,6 +71,25 @@ body{
     background:#37ab40;
     font-size:12px;
     border:none;
+    cursor: pointer;
+}
+.search .search_content{
+    display: none;
+    position: absolute;
+    left:0;
+    top:40px;
+    border:1px solid #ccc;
+    width:616px;
+    z-index:9999;
+    background:#fff;
+}
+.search .search_content li{
+    font-size:14px;
+    padding:0 15px;
+    color:#333;
+}
+.search .search_content li:hover{
+    background:#ccc;
     cursor: pointer;
 }
 .chat{

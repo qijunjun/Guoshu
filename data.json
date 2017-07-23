@@ -1,0 +1,8 @@
+{
+	"code":1,
+	"result":{
+		"username":"李煜",
+		"age":18,
+		"info":["male","engineer"]
+	}
+}

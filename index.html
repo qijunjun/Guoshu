@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/slide.js"></script>
+    <script src="js/userinfo.js"></script>
+    <script src="js/search.js"></script>
 </head>
 <body>
     <div class="header_con">
         <div class="header clearfix">
-            <div class="welcome float_left">欢迎来到易果生鲜！</div>
+            <div class="welcome float_left">欢迎来到天天生鲜！</div>
             <div class="user float_right clearfix">
                 <div class="user_login_link float_left">
                     <a href="login.html">登录</a>
@@ -23,7 +25,9 @@
                     <span>|</span>
                 </div>
                 <div class="user_welcome float_left">
-                    <span>欢迎您：<em>张三</em></span>
+                    <span>欢迎您：<em id="username">张三</em></span>
+                    <span>|</span>
+                    <span>用户中心</span>
                 </div>
                 <div class="user_shopping float_left">
                     <a href="javascript:void(0);">我的购物车</a>
@@ -40,8 +44,9 @@
             </a>
         </div>
         <div class="search float_left">
-            <input type="text" placeholder="搜索">
+            <input id="search" type="text" placeholder="搜索">
             <input type="button" value="搜索">
+            <ul class="search_content"></ul>
         </div>
         <div class="chat float_right">
             <a href="javascript:void(0);" class="cart">我的购物车</a>
