@@ -5,7 +5,7 @@
     /*border:1px solid #ccc;*/
 }
 .logo{
-    width:42%;
+    width:36%;
     height:500px;
     margin-right:5%;
     background:url("../images/register_banner.png") no-repeat right bottom;
@@ -18,7 +18,7 @@
     color:#37ab40;
 }
 .register{
-    width:45%;
+    width:50%;
     height:500px;
     background: url("../images/interval_line.png") no-repeat left center;
     color:#666;
@@ -33,11 +33,16 @@
     display: inline-block;
 }
 .register .title a{
-    width:70px;
-    /*height:32px;*/
-    /*line-height: 32px;*/
+    width:50px;
     display: inline-block;
-    background: url("../images/icons02.png") no-repeat 45px 0;
+    color:#37ab40;
+    font-size:14px;
+}
+.register .title .icon{
+    width:20px;
+    height:20px;
+    margin-top:4px;
+    background: url("../images/icons02.png") no-repeat 0 0;
 }
 .register .form{
     padding:20px 0 0;
@@ -62,8 +67,9 @@
     padding:0 2% 0;
 }
 .register .form .form-group .error{
+    height:15px;
     margin:10px 0 0;
-    text-indent: 26%;
+    text-indent: 22%;
     font-size:13px;
     color:#f00;
 }
