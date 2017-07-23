@@ -1,0 +1,99 @@
+.con{
+    width:800px;
+    /*height:600px;*/
+    margin:50px auto;
+    /*border:1px solid #ccc;*/
+}
+.logo{
+    width:42%;
+    height:500px;
+    margin-right:5%;
+    background:url("../images/register_banner.png") no-repeat right bottom;
+    text-align: right;
+}
+.logo h3{
+    margin-top:15px;
+    display: block;
+    text-align: right;
+    color:#37ab40;
+}
+.register{
+    width:45%;
+    height:500px;
+    background: url("../images/interval_line.png") no-repeat left center;
+    color:#666;
+    padding:0 30px;
+}
+.register .title{
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+}
+.register .title h3{
+    font-size:20px;
+    display: inline-block;
+}
+.register .title a{
+    width:70px;
+    /*height:32px;*/
+    /*line-height: 32px;*/
+    display: inline-block;
+    background: url("../images/icons02.png") no-repeat 45px 0;
+}
+.register .form{
+    padding:20px 0 0;
+}
+.register .form .form-group{
+    margin-top:10px;
+}
+.register .form .form-group label,.register .form .form-group input{
+    display: inline-block;
+}
+.register .form .form-group label{
+    width:20%;
+    height:38px;
+    line-height: 38px;
+    font-size: 14px;
+}
+.register .form .form-group input[type="text"]{
+    width:74%;
+    height:36px;
+    background: #f7f7f7;
+    border:1px solid #ccc;
+    padding:0 2% 0;
+}
+.register .form .form-group .error{
+    margin:10px 0 0;
+    text-indent: 26%;
+    font-size:13px;
+    color:#f00;
+}
+.register .form .form-group .explain{
+    width:69%;
+}
+.register .form .form-group input[type="checkbox"] {
+    width:16px;
+    height:16px;
+}
+.register .form .form-group button{
+    width:100%;
+    padding:10px 0;
+    border:0;
+    background:#37ab40;
+    color:#fff;
+    display: block;
+}
+/*版权信息样式*/
+.footer{
+    margin-top:30px;
+    padding:20px 0 35px;
+    border-top:2px solid #37ab40;
+}
+.footer p{
+    font-size:14px;
+    color:#4e4e4e;
+    text-align: center;
+    margin-top:15px;
+}
+.footer p a{
+    color:#4e4e4e;
+}
