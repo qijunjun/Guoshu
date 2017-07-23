@@ -17,6 +17,9 @@
     text-align: right;
     color:#37ab40;
 }
+.logo a{
+    display: block;
+}
 .register{
     width:50%;
     height:500px;
