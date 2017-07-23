@@ -62,7 +62,7 @@
     line-height: 38px;
     font-size: 14px;
 }
-.register .form .form-group input[type="text"]{
+.register .form .form-group input{
     width:74%;
     height:36px;
     background: #f7f7f7;
@@ -90,6 +90,7 @@
     background:#37ab40;
     color:#fff;
     display: block;
+    cursor: pointer;
 }
 /*版权信息样式*/
 .footer{
