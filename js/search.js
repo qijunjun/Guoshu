@@ -29,6 +29,9 @@ $(function(){
         }).fail(function(error){
             console.log("error");
         })
+    });
+    $(".search_content").delegate("li","click",function(){
+       $("#search").val($(this).html());
+        $(this).parent().hide();
     })
-
 })
