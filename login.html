@@ -5,8 +5,11 @@
     <title>果蔬网登录</title>
     <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,果蔬网">
     <meta name="Description" content="果蔬网Guoshu是专业的进口生鲜水果食品网络购物平台，为您精选全球3000多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，果蔬网是您悠悦生活的品质之选。">
+    <link rel="icon" href="images/rel_icon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
     <div class="login_header">
@@ -19,28 +22,29 @@
             </div>
             <div class="login_title float_left">日夜兼程.急速送达</div>
             <div class="float_right">
-                <form action="" class="login_form">
+                <form class="login_form">
                     <p>
-                        <a href="javascript:void(0);">会员登录</a>
-                        <a href="javascript:void(0);"><span> > </span>立即注册</a>
+                        <a href="login.html">会员登录</a>
+                        <a href="register.html"><span> > </span>立即注册</a>
                     </p>
-                    <div class="form_input">
-                        <input class="username" type="text" name="username" placeholder="请输入用户名">
-                        <span class="error" style="display: inline-block">输入信息提示</span>
+                    <div class="form_input usediv">
+                        <input id="username" class="username" type="text" name="username" placeholder="请输入用户名">
+                        <span class="error"></span>
                     </div>
                     <div class="form_input form_pwd">
-                        <input class="pwd" type="password" name="password" placeholder="请输入密码">
-                        <span class="error">输入信息提示</span>
+                        <input id="password" class="pwd" type="password" name="password" placeholder="请输入密码">
+                        <span class="error"></span>
                     </div>
                     <div class="clearfix">
                         <input class="float_left" type="checkbox" name="remember" id="remember">
                         <label for="remember" class="float_left">记住用户名</label>
                         <label class="float_right">忘记密码</label>
                     </div>
-                    <div>
-                        <button>登录</button>
+                    <div class="btn">
+                        <input type="button" class="button" value="登录">
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
