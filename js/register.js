@@ -14,57 +14,55 @@ $(function(){
     var reg = /^\w{5,15}$/i;
     var regPassword = /^[a-zA-Z0-9@\$\*\.\!\?]{6,16}$/;
     var regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-    //封装函数,验证输入框是否为空
-    function check(lei,txt,val){
+    //封装函数,验证输入框是否为空，是否符合相应的正则表达式
+    /*参数说明：
+        1、lei表示选择的哪个input框
+        2、txt表示输入框对应的文字
+        3、val  输入的相关内容
+        4、regLei 相应的正则表达式
+        5、regInfo 相应的文字说明
+    */
+    function check(lei,txt,val,regLei,regInfo){
+        //首先验证输入框是否为空
         if(val == ""){
             $(lei).next().html(txt+"不能为空");
             return false;
         }else{
             $(lei).next().html("");
+            //其次验证是否符合相应的正则表达式
+            if(!regLei.test(val)){
+                $(lei).next().html(regInfo);
+                return false;
+            }else{
+                $(lei).next().html("");
+            }
         }
     }
     $("#username").keyup(function(){
         username = $(this).val();
-        //首先验证用户名是否为空
-        check($(this),"用户名",username);
-        if(!reg.test(username)){
-            $(this).next().html("用户名必须以字母、下划线、数字开头，请检查！");
-            return false;
-        }
+        check($(this),"用户名",username,reg,"用户名必须以字母、下划线、数字开头，请检查！");
     });
     $("#password").keyup(function(){
         password = $(this).val();
-        check($(this),"密码",password);
-        if(!regPassword.test(password)){
-            $(this).next().html("密码长度为6-16位，请检查！");
-            return false;
-        }
+        check($(this),"密码",password,regPassword,"密码长度为6-16位，请检查！");
         //验证密码是否一致
         if(password != confirmPwd){
             confirmInfo.html("确认密码和密码不一致，请检查！");
             return false;
         }
-
     });
     $("#confirmPwd").keyup(function(){
         confirmPwd = $(this).val();
-        check($(this),"确认密码",confirmPwd);
+        check($(this),"确认密码",confirmPwd,regPassword,"确认密码长度为6-16位，请检查！");
         //验证密码是否一致
         if(password != confirmPwd){
             confirmInfo.html("确认密码和密码不一致，请检查！");
             return false;
         }
-
     });
     $("#email").keyup(function(){
         email = $(this).val();
-        check($(this),"邮箱",email);
-        if(!regEmail.test(email)){
-            $(this).next().html("邮箱格式不正确，请检查！");
-            return false;
-        }else{
-            $(this).next().html("");
-        }
+        check($(this),"邮箱",email,regEmail,"邮箱格式不正确，请检查！");
     });
     $("#checkbox").click(function(){
         if($(this).prop("checked") == false){
@@ -75,26 +73,13 @@ $(function(){
     });
    $("button").click(function(){
        //点击按钮提交前验证内容是否为空
-       check($("#username"),"用户名",username);
-       check($("#password"),"密码",password);
-       check($("#confirmPwd"),"确认密码",confirmPwd);
-       check($("#email"),"邮箱",email);
-       if(!reg.test(username)){
-           userInfo.append(" 用户名必须以字母、下划线、数字开头的5到15位字符。请检查");
-           return false;
-       }
+       check($("#username"),"用户名",username,reg,"用户名必须以字母、下划线、数字开头，请检查！");
+       check($("#password"),"密码",password,regPassword,"确认密码长度为6-16位，请检查！");
+       check($("#confirmPwd"),"确认密码",confirmPwd,regPassword,"确认密码长度为6-16位，请检查！");
+       check($("#email"),"邮箱",email,regEmail,"邮箱格式不正确，请检查！");
        //验证密码是否一致
        if(password != confirmPwd){
            confirmInfo.html("确认密码和密码不一致！请检查");
-           return false;
-       }
-       if(!regPassword.test(password)){
-           passwordInfo.html("密码长度为6-16位，请检查！");
-           return false;
-       }
-       //验证邮箱格式是否正确
-       if(!regEmail.test(email)){
-           emailInfo.html("邮箱格式不正确，请检查！");
            return false;
        }
        if($("#checkbox").prop("checked") == false){
@@ -103,7 +88,6 @@ $(function(){
        }else{
            $(".tip").html("");
        }
-       console.log($(".error").html()=="");
       if($(".error").html() == ""){
             $.ajax({
                 url:"接口",
