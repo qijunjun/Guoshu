@@ -63,8 +63,16 @@ div.menu .navbar-nav>li>a{
     font-weight: bold;
     line-height:25px;
 }
-.thumbnail img{
+.thumbnail .img{
+    overflow: hidden;
+}
+.thumbnail .img img{
     width:100%;
+    transition: all 1s ease;
+}
+.thumbnail .img img:hover{
+    transform: scale(1.2);
+
 }
 .thumbnail .caption{
     padding:10px;
