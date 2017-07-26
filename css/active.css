@@ -1,0 +1,111 @@
+body{
+    font-family: '微软雅黑';
+    font-size:14px;
+    color:#333;
+}
+.navbar{
+    margin-bottom: 0;
+    border: 0;
+}
+div.menu{
+    background: #ff722b;
+    border-radius: 0;
+}
+div.menu .navbar-nav>li>a{
+    color:#fff;
+    font-size:14px;
+    font-family: '微软雅黑';
+}
+.navbar-header .navbar-brand{
+    padding:5px 0;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background: #fff;
+}
+/*banner图*/
+.jumbotron{
+    height:360px;
+    background: url("../images/active/bannerbg.jpg") no-repeat;
+    border: 0;
+    margin-top:-1px;
+    margin-bottom:20px;
+}
+.jumbotron .banner_left,.jumbotron .banner_right{
+    width:40%;
+    margin-left:10%;
+}
+.jumbotron .banner_left h3{
+    color:#ffff00;
+    font-size:18px;
+}
+.jumbotron .banner_left p{
+    color:#fff;
+    font-size: 14px;
+    line-height:32px;
+}
+/*活动图片样式开始*/
+.contain{
+    padding:0 80px;
+}
+.contain .row{
+    margin:0;
+}
+.contain .active_img{
+    margin-bottom:20px;
+}
+.contain .active_img h3{
+    font-size: 28px;
+    margin-bottom:25px;
+}
+.active_img h3,.active_img p{
+    text-align: center;
+    color:#333333;
+    font-weight: bold;
+    line-height:25px;
+}
+.thumbnail img{
+    width:100%;
+}
+.thumbnail .caption{
+    padding:10px;
+}
+.thumbnail .caption h3{
+    text-align: center;
+    margin:0;
+    font-size:16px;
+}
+/*推荐商品*/
+.contain .row .goods_title{
+    background:#ff722b;
+    padding:15px 10px;
+    color:#fff;
+    font-size:16px;
+    margin-top:0;
+}
+.contain .row div[class*="col-"]{
+    padding:0;
+}
+.contain .row .thumbnail{
+    margin-left:-1px;
+    border-radius: 0;
+}
+.contain .row .caption .price{
+    text-align: center;
+    margin-top:15px;
+    margin-bottom:0;
+    color:#f00;
+    font-size:16px;
+    display: block;
+}
+/*底部样式*/
+.footer{
+    padding:30px 0;
+    background: #ff722b;
+    color:#fff;
+    text-align: center;
+    font-size:13px;
+    font-weight: bold;
+}
+.footer p a{
+    color:#fff;
+}
