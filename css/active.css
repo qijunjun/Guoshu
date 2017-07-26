@@ -11,96 +11,176 @@ div.menu{
     background: #ff722b;
     border-radius: 0;
 }
-div.menu .navbar-nav>li>a{
+div.menu .navbar-nav>li>a,.footer p,.footer p a{
     color:#fff;
-    font-size:14px;
-    font-family: '微软雅黑';
 }
 .navbar-header .navbar-brand{
     padding:5px 0;
 }
+.navbar-collapse,.navbar-form{
+    border-top-color: #fff;
+}
+.navbar-form{
+    border-bottom-color: #fff;
+}
+.navbar-default .navbar-toggle{
+    border:1px solid #fff;
+}
 .navbar-default .navbar-toggle .icon-bar{
     background: #fff;
 }
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{
+    background:pink;
+}
+.navbar-default .navbar-form{
+    border-color:#fff;
+}
 /*banner图*/
 .jumbotron{
-    height:360px;
-    background: url("../images/active/bannerbg.jpg") no-repeat;
+    width:100%;
+    background: url("../images/active/banner_bg.jpg") center center no-repeat;
     border: 0;
     margin-top:-1px;
     margin-bottom:20px;
+    padding:30px 0;
 }
-.jumbotron .banner_left,.jumbotron .banner_right{
-    width:40%;
-    margin-left:10%;
+.jumbotron .col-lg-6{
+    margin-top:40px;
 }
-.jumbotron .banner_left h3{
-    color:#ffff00;
+.jumbotron .col-lg-6 h3{
+    color:#ff0;
     font-size:18px;
 }
-.jumbotron .banner_left p{
+.jumbotron .col-lg-6 p{
     color:#fff;
     font-size: 14px;
     line-height:32px;
 }
+@media (max-width: 992px) {
+    .jumbotron .col-lg-6 {
+        margin-top: 20px;
+    }
+}
 /*活动图片样式开始*/
 .contain{
-    padding:0 80px;
+    padding:0 3%;
 }
 .contain .row{
     margin:0;
 }
 .contain .active_img{
+    margin-top:12px;
     margin-bottom:20px;
 }
 .contain .active_img h3{
     font-size: 28px;
     margin-bottom:25px;
+    margin-top:0;
 }
 .active_img h3,.active_img p{
-    text-align: center;
-    color:#333333;
     font-weight: bold;
     line-height:25px;
+}
+.contain .row div[class*="col-lg-"] {
+    /*text-align: center;*/
+}
+.thumbnail{
+    max-width:260px;
+    margin:0 auto 20px;
+    display: inline-block;
 }
 .thumbnail .img{
     overflow: hidden;
 }
 .thumbnail .img img{
     width:100%;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 .thumbnail .img img:hover{
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
-
 }
-.thumbnail .caption{
+.thumbnail  h3{
     padding:10px;
-}
-.thumbnail .caption h3{
     text-align: center;
     margin:0;
     font-size:16px;
 }
 /*推荐商品*/
-.contain .row .goods_title{
-    background:#ff722b;
-    padding:15px 10px;
-    color:#fff;
+.contain .goods_list{
+    margin-bottom: 20px;
+}
+.contain .goods_title{
+    padding:0 10px 0 0;
     font-size:16px;
-    margin-top:0;
+    margin-bottom:20px;
 }
-.contain .row div[class*="col-"]{
+.contain .goods_list .goods_title{
+    background:#ff722b;
+}
+.contain .goods_title h3,.contain .goods_title a{
+    margin:0;
+    height:40px;
+    line-height:40px;
+    text-indent: 32px;
+    color: #fff;
+}
+.contain .goods_list div[class*="col-"]{
     padding:0;
+    border:1px solid #ddd;
+    margin-top:-1px;
+    text-align: center;
 }
-.contain .row .thumbnail{
-    margin-left:-1px;
-    border-radius: 0;
+/*调整边框重叠的方法，如果使用margin-left:-1px的方法的话，会多出5像素的宽度*/
+@media (min-width:768px){
+    .contain .goods_list div[class*="col-"]:nth-child(2n+1){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(2n){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(3n){
+        border-right-color:#ddd
+    }
+}
+@media (min-width:992px){
+    .contain .goods_list div[class*="col-"]:nth-child(2n+1){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(3n){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(4n){
+        border-right-color:#ddd
+    }
+}
+@media (min-width:1200px){
+    .contain .goods_list div[class*="col-"]:nth-child(2n+1){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(4n){
+        border-right-color:#fff
+    }
+    .contain .goods_list div[class*="col-"]:nth-child(6n){
+        border-right-color:#ddd
+    }
+}
+.contain .goods_list div[class*="col-"] img{
+    display: inline-block;
+}
+.contain .row .caption h3{
+    text-align: center;
 }
 .contain .row .caption .price{
     text-align: center;
     margin-top:15px;
-    margin-bottom:0;
+    margin-bottom:15px;
     color:#f00;
     font-size:16px;
     display: block;
@@ -109,11 +189,11 @@ div.menu .navbar-nav>li>a{
 .footer{
     padding:30px 0;
     background: #ff722b;
-    color:#fff;
     text-align: center;
     font-size:13px;
     font-weight: bold;
 }
-.footer p a{
-    color:#fff;
+.footer p{
+    letter-spacing: 1px;
+
 }
