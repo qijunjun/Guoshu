@@ -13,7 +13,8 @@ $(function(){
     //用户名必须是以字母数字下划线开头，5到15位
     var reg = /^\w{5,15}$/i;
     var regPassword = /^[a-zA-Z0-9@\$\*\.\!\?]{6,16}$/;
-    var regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+    // var regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+    var regEmail = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;
     //封装函数,验证输入框是否为空，是否符合相应的正则表达式
     /*参数说明：
         1、lei表示选择的哪个input框
