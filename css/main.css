@@ -301,16 +301,17 @@ div .next{
 .nav_left .adv{
     width:240px;
     height:270px;
-    /*font-size:0;*/
 }
 /*浮动可以使内联元素以及块元素转换为行内块元素*/
 /*浮动可以解决行内块元素之间的间隙*/
 .adv a{
     float:left;
+    font-size: 0;
 }
 /*解决图片下方出现3像素的白边(空白bug)方法如下：*/
 /*第一种方法：给a标签和img标签加display:block;*/
 /*第二种方法：给父元素加font-size:0;*/
+/*第三种方法：给img标签加vertical-align:middle;*/
 .adv a img{
     width:240px;
     display: block;
