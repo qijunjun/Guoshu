@@ -4,7 +4,9 @@
 $(function(){
     $("#search").keyup(function(){
         var keyword = $(this).val();
-        document.title = keyword;
+        if($.trim(keyword).length == 0){
+            return false;
+        }
         $.ajax({
             url:"https://sug.so.360.cn/suggest?",
             type:"get",
@@ -22,7 +24,6 @@ $(function(){
                 }else{
                     $(".search_content").html("");
                     $(".search_content").hide();
-
                 }
             }
             console.log(data)
@@ -34,4 +35,4 @@ $(function(){
        $("#search").val($(this).html());
         $(this).parent().hide();
     })
-})
+});
