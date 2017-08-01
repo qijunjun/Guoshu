@@ -23,7 +23,7 @@
                 <a class="float_right icon"></a>
                 <a class="float_right" href="login.html">登录</a>
             </div>
-            <div class="form">
+            <form class="form" action="upload.php" target="fileFrame" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="username">用户名:</label>
                     <input type="text" id="username" class="username" placeholder="请输入长度位5-15位的用户名">
@@ -44,21 +44,19 @@
                     <input type="text" id="email" class="email" placeholder="请输入邮箱地址">
                     <p class="error emailInfo"></p>
                 </div>
+                <input type="hidden" id="filename">
                 <div class="form-group">
                     <label for="file">头像:</label>
                     <input type="file" id="file" class="photo">
-                    <a>上传</a>
+                    <a id="up">上传</a>
                 </div>
                 <div class="form-group">
                     <input type="checkbox" id="checkbox" class="checkbox" checked>
                     <label class="explain">同意天天生鲜用户使用协议</label>
                     <p class="error tip" style="display: inline-block"></p>
                 </div>
-                <div class="form-group">
-                    <button>注册</button>
-                </div>
-            </div>
-
+            </form>
+            <button id="submit">注册</button>
         </div>
     </div>
     <div class="footer">
@@ -74,5 +72,6 @@
         <p>CopyRight © 2016 果蔬网信息技术有限公司 All Rights Reserved</p>
         <p>电话：010-****888    京ICP备*******8号</p>
     </div>
+    <iframe  name="fileFrame" style="display: none;"></iframe>
 </body>
 </html>

@@ -15,6 +15,11 @@ $(function(){
     var regPassword = /^[a-zA-Z0-9@\$\*\.\!\?]{6,16}$/;
     // var regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
     var regEmail = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;
+    //upload.php返回的callback函数
+    function callback(filename){
+        $("#filename").val(filename);
+        $("#up").val("已上传")
+    }
     //封装函数,验证输入框是否为空，是否符合相应的正则表达式
     /*参数说明：
         1、lei表示选择的哪个input框
@@ -72,7 +77,9 @@ $(function(){
             $(".tip").html("");
         }
     });
-   $("button").click(function(){
+   $("#submit").click(function(){
+       // event.preventDefault();
+       // event.stopPropagation();
        //点击按钮提交前验证内容是否为空
        check($("#username"),"用户名",username,reg,"用户名必须以字母、下划线、数字开头，请检查！");
        check($("#password"),"密码",password,regPassword,"确认密码长度为6-16位，请检查！");
@@ -94,7 +101,7 @@ $(function(){
                 url:"接口",
                 type:"post",
                 dataType:"json",
-                data:{name:username,password:password,email:email}
+                data:{name:username,password:password,email:email,photo:$("#filename").val()}
             }).done(function(data){
 
             }).fail(function(err){
